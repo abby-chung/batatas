@@ -3,8 +3,28 @@ body {
   font-family: sans-serif;
   background-color: #f8f8f8;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Main content takes up remaining space */
+main {
+  flex: 1;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: rgb(200, 200, 200);
+  text-align: center;
+  padding: 1em 0;
 }

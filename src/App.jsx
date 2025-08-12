@@ -61,7 +61,7 @@ function NotFound() {
   return (
     <div className="p-4">
       <h1>404 - Page Not Found</h1>
-      <Link to="/">Go back to Home</Link>
+      <Link to="/batatas">Go back to Home</Link>
     </div>
   );
 }
@@ -71,12 +71,12 @@ function Layout({ children }) {
     <div className="max-w-3xl mx-auto">
       <header>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/blog">Blog</Link> | <Link to="/about">About</Link>
+          <Link to="/batatas">Home</Link> | <Link to="/blog">Blog</Link> | <Link to="/about">About</Link>
         </nav>
       </header>
       <main>{children}</main>
       <footer>
-        <Link to="/privacy">Privacy Policy</Link> | <Link to="/terms">Terms</Link>
+        <p>© 2025 Batatas</p>
       </footer>
     </div>
   );
