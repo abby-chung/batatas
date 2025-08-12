@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/batatas/' // Replace with your repo name
+  base: '/batatas/',
+  build: {
+    emptyOutDir: true, // ensures dist is cleared before building
+  }
 });
