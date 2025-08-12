@@ -52,7 +52,7 @@ function About() {
   return (
     <div className="p-4">
       <h1>About Me</h1>
-      <p>This is where I'll share more about myself and the purpose of this blog.</p>
+      <p>Still figuring out what I should do next.</p>
     </div>
   );
 }
@@ -87,7 +87,7 @@ export default function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/batatas" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<Post />} />
           <Route path="/about" element={<About />} />
