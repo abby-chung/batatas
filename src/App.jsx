@@ -5,7 +5,7 @@ import "./index.css";
 function Home() {
   return (
     <div className="p-4">
-      <h1>Welcome to My Blog</h1>
+      <h1>Welcome to the world of batatas</h1>
       <p>A personal journal on coffee, books, movies, and tech learning.</p>
       <h2>Recent Posts</h2>
       <ul>
