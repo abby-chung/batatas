@@ -1,11 +1,22 @@
+import React from 'react';
+import { allPosts } from '../data/posts'; // Assuming you create a new file for the data
+
+// PostWithSidebar and Post components as provided in the previous response...
+
 const PostWithSidebar = ({ slug, onNavigate }) => {
   const post = allPosts.find(p => p.slug === slug);
 
   if (!post) {
-    // ... 404 handling remains the same ...
+    return (
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">404 - Post Not Found</h1>
+        <p className="text-lg text-gray-600">The post you are looking for does not exist.</p>
+      </main>
+    );
   }
 
   const allCategories = [...new Set(allPosts.map(p => p.category))];
+  const recentPosts = allPosts.slice(0, 3); // Get the first 3 recent posts
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -50,7 +61,7 @@ const PostWithSidebar = ({ slug, onNavigate }) => {
               {allCategories.map(cat => (
                 <li key={cat}>
                   <a
-                    onClick={() => onNavigate(`/blog?filter=${cat}`)} // Example of linking to a filtered blog page
+                    onClick={() => onNavigate(`/blog?filter=${cat}`)}
                     className="cursor-pointer block p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
                   >
                     {cat}
@@ -62,7 +73,7 @@ const PostWithSidebar = ({ slug, onNavigate }) => {
           <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-lg text-gray-900 mb-4">Recent Posts</h3>
             <ul className="space-y-4">
-              {allPosts.slice(0, 3).map(p => (
+              {recentPosts.map(p => (
                 <li key={p.id}>
                   <a
                     onClick={() => onNavigate(`/blog/${p.slug}`)}
@@ -88,3 +99,5 @@ const PostWithSidebar = ({ slug, onNavigate }) => {
     </main>
   );
 };
+
+export default PostWithSidebar;

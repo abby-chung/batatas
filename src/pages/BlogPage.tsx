@@ -1,3 +1,8 @@
+import React, { useState } from 'react'; // Import useState
+import PostCard from '../components/PostCard'; // Import PostCard component
+import { allPosts } from '../data/posts'; // Assuming you create a new file for the data
+
+// BlogSidebar and BlogPage components as provided in the previous response...
 const BlogSidebar = ({ categories, onFilterChange, currentFilter }) => (
   <aside className="space-y-6">
     <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
@@ -31,7 +36,6 @@ const BlogSidebar = ({ categories, onFilterChange, currentFilter }) => (
         ))}
       </ul>
     </div>
-    {/* You can add more widgets here, like a recent posts list or an author bio */}
     <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       <h3 className="font-semibold text-lg text-gray-900 mb-4">About the Author</h3>
       <p className="text-sm text-gray-600">
@@ -84,3 +88,5 @@ const BlogPage = ({ onNavigate }) => {
     </main>
   );
 };
+
+export default BlogPage;
