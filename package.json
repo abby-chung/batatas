@@ -5,7 +5,8 @@
   "homepage": "https://abby-chung.github.io/batatas/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "clean": "rm -rf dist",
+    "build": "yarn run clean && vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
