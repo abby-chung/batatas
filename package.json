@@ -2,6 +2,7 @@
   "name": "batatas",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://abby-chung.github.io/batatas/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
