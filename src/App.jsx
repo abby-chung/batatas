@@ -71,7 +71,12 @@ function Layout({ children }) {
     <div className="max-w-3xl mx-auto">
       <header>
         <nav>
-          <Link to="/batatas">Home</Link> | <Link to="/blog">Blog</Link> | <Link to="/about">About</Link>
+          {/* <Link to="/batatas/">Home</Link> | <Link to="/blog">Blog</Link> | <Link to="/about">About</Link> */}
+          <ul>
+            <li><a href="./batatas/">Home</a></li>
+            <li><a href="./blog">Blogs</a></li>
+            <li><a href="./about">About</a></li>
+          </ul>
         </nav>
       </header>
       <main>{children}</main>
