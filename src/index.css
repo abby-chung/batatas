@@ -36,9 +36,9 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #1a1a1a;
+  color: #333;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 16px;
   position: relative;
 }
 
@@ -46,7 +46,7 @@ nav ul li a::after {
   content: '';
   width: 0;
   height: 3px;
-  background:#29874e;
+  background:#f29f1b;
   position: absolute;
   left: 0;
   bottom: -6px;
